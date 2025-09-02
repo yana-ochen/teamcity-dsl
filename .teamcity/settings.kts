@@ -30,7 +30,7 @@ version = "2025.07"
 
 object SepaVcs : GitVcsRoot({
     name = "Sepa Settings"
-    url = "https://github.com/java-sepa-xml/java-sepa-xml.git"
+    url = "https://github.com/java-sepa-xml/java-sepa-xml"
     branch = "refs/heads/master"
 })
 
