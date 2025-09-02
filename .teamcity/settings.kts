@@ -28,16 +28,9 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 
 version = "2025.07"
 
-project {
-
-    vcsRoot(SepaVcs)
-
-    buildType(Build)
-}
-
 object SepaVcs : GitVcsRoot({
     name = "Sepa Settings"
-    url = "https://github.com/<owner>/<sepa-repo>.git"
+    url = "https://github.com/JavaSepaXml/JavaSepaXml.git"
     branch = "refs/heads/master"
 })
 
@@ -67,9 +60,7 @@ object Build : BuildType({
     }
 })
 
-object HttpsGithubComJavaSepaXmlJavaSepaXmlRefsHeadsMaster : GitVcsRoot({
-    name = "https://github.com/java-sepa-xml/java-sepa-xml#refs/heads/master"
-    url = "https://github.com/java-sepa-xml/java-sepa-xml"
-    branch = "refs/heads/master"
-    branchSpec = "refs/heads/*"
-})
+project {
+    vcsRoot(SepaVcs)
+    buildType(Build)
+}
