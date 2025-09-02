@@ -30,16 +30,22 @@ version = "2025.07"
 
 project {
 
-    vcsRoot(HttpsGithubComJavaSepaXmlJavaSepaXmlRefsHeadsMaster)
+    vcsRoot(SepaVcs)
 
     buildType(Build)
 }
+
+object SepaVcs : GitVcsRoot({
+    name = "Sepa Settings"
+    url = "https://github.com/<owner>/<sepa-repo>.git"
+    branch = "refs/heads/master"
+})
 
 object Build : BuildType({
     name = "Build"
 
     vcs {
-        root(HttpsGithubComJavaSepaXmlJavaSepaXmlRefsHeadsMaster)
+        root(SepaVcs)
     }
 
     steps {
